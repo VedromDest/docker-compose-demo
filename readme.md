@@ -42,3 +42,8 @@ en zelfde voor front end
 ## Compose Uit Images
 
 `DockerComposePublish` is een versie van dezelfde software, maar die enkel met gepublishte images werkt. Dit is handiger om software te distribueren.
+
+## Verbeteringen
+
+Dit voorbeeld gebruikt environment variables voor db en backend. De front end heeft hardcoded urls. Dit is onwenselijk.
+Studenten kunnen de lector Web 3 consoluteren voor info over vite environment.
