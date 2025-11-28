@@ -1,0 +1,33 @@
+name: docker-compose-demo--db-api-ui
+services:
+  minidb:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d  
+  miniapi:
+    build:
+      context: ./backend/MiniApi
+      dockerfile: Dockerfile
+    environment:
+      MYSQL_CONNECTION_STRING: ${MYSQL_CONNECTION_STRING}
+    ports:
+      - "7777:8080"
+    depends_on:
+      minidb:
+        condition: service_started
+  minife:
+    build:
+      context: ./frontend/mini-fe
+      dockerfile: Dockerfile
+    ports:
+      - "8008:80"
+    depends_on:
+      miniapi:
+        condition: service_started
