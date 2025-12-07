@@ -32,15 +32,28 @@ docker login
 
 Build lokaal de image. Gebruik (uiteraard) de naam van jouw account/repo:tag
 ````
-docker build -t stefanhogent/nt-aalst:backend .
+docker build -t stefanhogent/hogent-docker-demo:backend .
 ````
 
 Push de gebouwde image naar docker hub. Gebruik (uiteraard) de naam van jouw account/repo:tag
 ````
-docker push stefanhogent/nt-aalst:backend
+docker push stefanhogent/hogent-docker-demo:backend
 ````
 
-en zelfde voor front end
+> [!TIP]
+> Je herhaalt deze operaties voor elke image die je beoogt te publiceren.
+
+#### Cross-builden
+
+Indien je wil cross-builden naar andere architecturen, is dat mogelijk. 
+````
+docker buildx build --platform linux/amd64,linux/arm64 -t stefanhogent/hogent-docker-demo:backend .
+````
+Waarom zou je dat willen?
+- Vanop standaard X86 laptop images builden die compatibel zijn met Apple M computers, Snapdragon Windows computers en energiezuinige ARM datacenter servers.
+- Vanop (AR)M computers builden voor standaard X86 laptops en conventionele datacenter servers.
+
+Waarom altijd linux? Grofweg: omdat Docker standaard alles runt in een Linux VM, ook op windows en macos.
 
 ## Compose Uit Images
 
