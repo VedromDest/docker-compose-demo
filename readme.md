@@ -67,3 +67,15 @@ Waarom altijd linux? Grofweg: omdat Docker standaard alles runt in een Linux VM,
 
 Dit voorbeeld gebruikt environment variables voor db en backend. De front end heeft hardcoded urls. Dit is onwenselijk.
 Studenten kunnen de lector Web 3 consoluteren voor info over vite environment.
+
+## Troubleshooting
+
+Wanneer je de structuur van dit werkend voorbeeld overbrengt op je eigen applicatie, zal dit zelden van de eerste keer correct zijn. 
+
+Typische problemen:
+- .env settings
+- poorten
+- urls
+- CORS
+- verkeerde verwachtingen van react-router
+- ...
