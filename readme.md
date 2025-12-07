@@ -37,7 +37,7 @@ docker build -t stefanhogent/nt-aalst:backend .
 
 Push de gebouwde image naar docker hub. Gebruik (uiteraard) de naam van jouw account/repo:tag
 ````
-% docker push stefanhogent/nt-aalst:backend
+docker push stefanhogent/nt-aalst:backend
 ````
 
 en zelfde voor front end
