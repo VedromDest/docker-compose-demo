@@ -5,6 +5,9 @@ Dit is een piepklein voorbeeld van hoe je een compositie kan maken van
   - .net api (build)
   - react app (build)
 
+> [!TIP]
+> Services in een compositie worden standaard samen in een virtueel netwerk geplaatst. Hierin kunnen ze mekaar bereiken op de **interne** poorten. De UI web app wordt geserved vanuit Docker, maar runt in jouw browser op localhost. Dit heeft implicaties voor api endpoint urls en CORS configuratie.
+
 ## Lokaal
 
 `DockerComposeLocal` is een compositie die werkt met eigen source code
