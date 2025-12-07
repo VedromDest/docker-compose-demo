@@ -1,3 +1,7 @@
+# Opname
+
+Er bestaat een [HOGENT opname](https://hogent-my.sharepoint.com/:v:/g/personal/stefan_courteaux_hogent_be/IQChLh0JEbr1Ra_jNQMvitpZAdt_MY-noXtMDzHuscMH1es?e=sIlvYr&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D).
+
 # Docker Compose Voorbeeld
 
 Dit is een piepklein voorbeeld van hoe je een compositie kan maken van 
@@ -19,7 +23,7 @@ Dit is een piepklein voorbeeld van hoe je een compositie kan maken van
 
 ### Dockerhub
 
-Container registry: [https://hub.docker.com]
+Container registry: [hub.docker.com](https://hub.docker.com)
 - Maak een account
 - Maak een repo
 
