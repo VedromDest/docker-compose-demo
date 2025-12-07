@@ -10,9 +10,9 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - ./init:/docker-entrypoint-initdb.d  
+      - ./init:/docker-entrypoint-initdb.d
   miniapi:
-    image: stefanhogent/nt-aalst:backend
+    image: stefanhogent/hogent-docker-demo:backend
     environment:
       MYSQL_CONNECTION_STRING: ${MYSQL_CONNECTION_STRING}
     ports:
@@ -21,7 +21,7 @@ services:
       minidb:
         condition: service_started
   minife:
-    image: stefanhogent/nt-aalst:frontend
+    image: stefanhogent/hogent-docker-demo:frontend
     ports:
       - "8008:80"
     depends_on:
